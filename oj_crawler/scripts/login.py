@@ -16,7 +16,7 @@ def oj_login(driver) :
         By.XPATH, "/html/body/div[2]/div/div/div/div/form/div[2]/input"
     )
     
-    id_box.send_keys(input("자신의 학번 : "))
+    id_box.send_keys(input("자신의 아이디 : "))
     pwd_box.send_keys(getpass.getpass("자신의 비밀번호 : "))
 
 
