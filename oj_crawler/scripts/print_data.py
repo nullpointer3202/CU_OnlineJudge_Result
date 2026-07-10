@@ -10,7 +10,7 @@ def print_data(datalist):
         print(f"문제 {code_index + 1}에 대한 점수:")
         for i, data in enumerate(data_list):
             print(f"Data {i + 1}:")
-            print(f"학번: {data['suid']}")
+            print(f"아이디: {data['suid']}")
             print(f"상태: {data['result']}")
             print(f"점수: {data['score']}")
             print()
@@ -56,7 +56,7 @@ def print_trial(datalist):
     for student_num, data in student_data.items():
         calc += 1
         print(calc)
-        print(f"학번: {student_num}")
+        print(f"아이디: {student_num}")
         print(f"맞은 갯수: {data['accept_count']}")
         print(f"총점: {data['total_score']}")
 
