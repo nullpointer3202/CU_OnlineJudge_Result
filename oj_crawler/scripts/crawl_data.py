@@ -95,7 +95,7 @@ def get_status(problem, driver):
         By.XPATH, "/html/body/div[2]/div/div[4]/div[1]/form/input"
     )
 
-    # 학번 박스 내용 삭제
+    # 아아디 박스 내용 삭제
     uid_box.clear()
     search_btn.click()
 
@@ -148,7 +148,7 @@ def get_data(driver):
     print()
     return data
 
-#Data 작성 및 수정 : 같은 학번이 있을 경우 대체. => get_submissions에서 사용
+#Data 작성 및 수정 : 같은 아이디가 있을 경우 대체. => get_submissions에서 사용
 def write_data(suid, result, score, data):
     for student in data:
         if student["suid"] == suid:
@@ -167,7 +167,7 @@ def print_data(datalist):
         print(f"문제 {code_index + 1}에 대한 점수:")
         for i, data in enumerate(data_list):
             print(f"Data {i + 1}:")
-            print(f"학번: {data['suid']}")
+            print(f"아이디: {data['suid']}")
             print(f"상태: {data['result']}")
             print(f"점수: {data['score']}")
             print()
@@ -213,7 +213,7 @@ def print_trial(datalist):
     for student_num, data in student_data.items():
         calc += 1
         print(calc)
-        print(f"학번: {student_num}")
+        print(f"아이디: {student_num}")
         print(f"맞은 갯수: {data['accept_count']}")
         print(f"총점: {data['total_score']}")
 
@@ -256,7 +256,7 @@ def get_trial_data(student_data, student_trial, datalist):
     tdata = []
     for student_num, data in student_data.items():
         student = {}
-        student["학번"] = student_num
+        student["아이디"] = student_num
         student["맞은 갯수"] = data["accept_count"]
         student["총점"] = data["total_score"]
 
